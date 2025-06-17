@@ -8,7 +8,7 @@ public class Student implements Serializable{
 	private int id;
 	private String name;
 	
-	Student (int id, String name){
+	public Student (int id, String name){
 		this.setId(id);
 		this.setName(name);
 	}
@@ -27,6 +27,13 @@ public class Student implements Serializable{
 
 	public void setName(String name) {
 		this.name = name;
+	}
+	
+	public String toString() {
+		StringBuilder out = new StringBuilder();
+		out.append("ID   : " + getId());
+		out.append("\nName : " + getName());
+		return out.toString();
 	}
 	
 	
